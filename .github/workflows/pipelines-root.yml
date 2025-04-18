@@ -36,13 +36,14 @@ on:
         required: true
       ORG_REPO_ADMIN_TOKEN:
         required: false
+      MONGODB_ATLAS_PRIVATE_KEY:
+        required: true
 
 env:
   PIPELINES_CLI_VERSION: v0.37.0
   PIPELINES_ACTIONS_VERSION: v3.6.1
   BOILERPLATE_VERSION: v0.5.16
   GRUNTWORK_INSTALLER_VERSION: v0.0.40
-  MONGODB_ATLAS_PRIVATE_KEY: ${{ secrets.MONGODB_ATLAS_PRIVATE_KEY }}
   # Disables all executions of terragrunt. This is useful for debugging
   # specifics of pipelines actions/workflows and bypassing the (usually time consuming)
   # actual IaC execution.
